@@ -11,7 +11,6 @@ const knex =require('knex')({
 knex.schema.createTable('Auction',(table) => {
     table.string('Name')
     table.increments('Auction_id')
-    // table.increments('bidder_id')
     table.float('bid_value')
 })
     .then(() => {
