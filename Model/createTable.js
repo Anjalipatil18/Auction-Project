@@ -10,13 +10,11 @@ const knex =require('knex')({
 
 knex.schema.createTable('Auction',(table) => {
     table.string('Name')
-    table.integer('auction_id').unique()
-    table.increments('bidder_id')
+    table.increments('Auction_id')
+    // table.increments('bidder_id')
     table.float('bid_value')
 })
     .then(() => {
         console.log("table created")
     })
     .catch((err) => { console.log(err); throw err })
-
-
