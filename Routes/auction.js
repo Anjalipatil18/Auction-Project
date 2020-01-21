@@ -58,8 +58,6 @@ auction.get('/sold_out',(req,res)=>{
         var max=(max_value[0]['max_value']);
         var bidder_id=max_value[0]['bidder_id']
         var auction_id=max_value[0]['auction_id']
-        // var auction_name=name[0]['auction_name']
-        // console.log(auction_id)
         knexAdd.auctionName(auction_id).then((name)=>{
             var auction_name=name[0]['auction_name']
             knexAdd.nameInsert(auction_id,bidder_id, max, auction_name ).then((data)=>{
